@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>World's End Gym</title>
+</head>
+
+<body>
+
+    <div class="nav-list">
+    </div>
+    <ul class="menu-bar>
+        <li><a href=" #hero" data-after="Home">Home</a></li>
+        <li><a href="#services" data-after="Services">Services</a></li>
+        <li><a href="#ameneties" data-after="Amenities">Amenities</a></li>
+        <li><a href="#facilities" data-after="Facilities">Facilities</a></li>
+        <li><a href="#about" data-after="About">About</a></li>
+        <li><a href="#contact" data-after="Contact">Contact</a></li>
+
+    </ul>
+
+    </div>
+
+
+
+    <h1>REDEFINING FITNESS</h1>
+
+    <h3>The gym that offers you more.</h3>
+
+
+
+    <div class="container">
+
+        <!-- Login Account form, set as active -->
+        <form class="form-hidden" id="login">
+            <h1 class="form-title">Login</h1>
+            <div class="form-message form-message-error"></div>
+            <div class="form-input-group">
+                <input type="text" class="form-input" autofocus placeholder="Username or Email"> <!-- autofocus to focus on page load -->
+                <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+                <input type="password" class="form-input" autofocus placeholder="Password">
+                <div class="form-input-error-message"></div>
+            </div>
+            <button class="form-button" type="submit" id="">Continue</button>
+            <p class="form-text">
+                <a href="#" class="form-link">Forgot your password?</a> <!-- href link to password reset page -->
+            </p>
+            <p class="form-text">
+                <a class="form-link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                <!-- href link to password reset page -->
+            </p>
+        </form>
+
+        <!-- Create Account form, set as hidden -->
+        <form action="members.php" method="post" class="form" id="createAccount">
+            <h1 class="form-title">Create Account</h1>
+            <div class="form-message form-message-error"></div>
+            <div class="form-input-group">
+                <input type="text" id="signupUsername" Name="name" class="form-input" autofocus placeholder="Username">
+                <!-- autofocus to focus on page load -->
+                <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+                <input type="text" class="form-input" Name="email" autofocus placeholder="Email Address">
+                <div class="form-input-error-message"></div>
+            </div>
+
+            <!--   SET UP PASSWORD NEXT -->
+            <div class="form-input-group">
+                <input type="password" class="form-input" Name="password" autofocus placeholder="Password">
+                <div class="form-input-error-message"></div>
+            </div>
+            <div class="form-input-group">
+                <input type="password" class="form-input" autofocus placeholder="Confirm Password">
+                <div class="form-input-error-message"></div>
+
+            </div>
+            <button class="form-button" type="submit" id="">Continue</button>
+            <p class="form-text">
+                <a class="form-link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                <!-- href link to password reset page -->
+            </p>
+
+        </form>
+        <p action="displaydata.php" class="form-text">
+            <label for="pswd"> </label>
+            <input type="password" class="form-input" id="pswd">
+            <input type="button" value="Admin login" class="admin-button" onclick="checkPswd();" />
+            <!-- created link to ADMIN page to display database -->
+        </p>
+
+    </div>
+    <!--    NOT USING THIS SETUP
+    <form>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="r_name" required></td> set char limit here
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="r_email" required></td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="r_pass" required></td>
+                </tr>
+                <tr>
+                    <td>DOB:</td>
+                    <td><input type="date" name="r_date" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male"> Male <br>
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="r_reg" value="Register"></td>
+                </tr>
+
+            </table>
+        </form>
+    -->
+    <!-- PHP EXAMPLE FROM W3SCHOOLS
+    Welcome<br>
+    Your Username is: <?php echo $_POST["name"]; ?><br>
+    Your email address is: <?php echo $_POST["email"]; ?><br>
+    Your password is: <?php echo $_POST["password"]; ?><br>
+
+    <?php
+    echo "This is a test!!";
+    ?>
+-->
+
+    <script src="script.js"></script>
+    <script src="admincheck.js"></script>
+</body>
+
+</html>
